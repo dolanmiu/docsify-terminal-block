@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "dictionaryDefinitions": [
+    {
+      "name": "project-words",
+      "path": "./project-words.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": ["project-words"],
+  "ignorePaths": ["node_modules", "/project-words.txt", "dist"],
+  "language": "en",
+  "languageSettings": [
+    {
+      "languageId": "typescript",
+      "dictionaries": ["typescript", "project-words"]
+    },
+    {
+      "languageId": "javascript",
+      "dictionaries": ["javascript", "project-words"]
+    }
+  ]
+}

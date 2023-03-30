@@ -1,0 +1,6 @@
+chrono
+daisyui
+docsify
+iife
+jsdelivr
+tailwindcss

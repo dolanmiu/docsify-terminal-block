@@ -1,0 +1,44 @@
+{
+  "name": "docsify-terminal-block",
+  "version": "1.0.0",
+  "description": "",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.iife.js",
+  "scripts": {
+    "dev": "vite",
+    "serve:docs": "docsify serve docs",
+    "serve:dist": "http-server dist",
+    "build": "tsc && vite build",
+    "build:watch": "vite build --watch",
+    "prepublishOnly": "npm run build",
+    "preview": "vite preview",
+    "cspell": "cspell \"**\"",
+    "prettier": "prettier -l .",
+    "prettier:fix": "npm run prettier -- --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dolanmiu/docsify-terminal-block.git"
+  },
+  "homepage": "https://github.com/dolanmiu/docsify-terminal-block",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cspell": "^6.30.0",
+    "docsify-cli": "^4.4.4",
+    "http-server": "^14.1.1",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^5.0.2",
+    "vite": "^4.2.0",
+    "vite-plugin-css-injected-by-js": "^3.1.0"
+  },
+  "dependencies": {
+    "daisyui": "^2.51.4"
+  }
+}
