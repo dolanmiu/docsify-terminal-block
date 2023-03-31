@@ -1,10 +1,11 @@
 export const createContainerBlock = (elements: HTMLElement[]) => {
-  // <div class="flex flex-col items-end gap-1">...</div>
+  // <div class="mockup-code">...</div>
 
   const output = document.createElement("div");
-  output.classList.add("flex", "flex-col", "items-end", "gap-2", "pt-5");
+  output.classList.add("mockup-code");
   elements.forEach((element) => {
     output.appendChild(element);
   });
+  console.log(output)
   return output;
 };
