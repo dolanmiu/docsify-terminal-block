@@ -8,7 +8,9 @@ export const createLineBlocks = (
     const lineBlock = document.createElement("pre");
     lineBlock.setAttribute("v-pre", "");
     lineBlock.setAttribute("data-lang", "");
-    lineBlock.setAttribute("data-prefix", line.prefix);
+    if (line.prefix) {
+      lineBlock.setAttribute("data-prefix", line.prefix);
+    }
     lineBlock.setAttribute(
       "style",
       "background-color: transparent; padding: 0; margin: 0; display: flex;"
