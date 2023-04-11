@@ -3,6 +3,7 @@ import "./index.css";
 import { createContainerBlock } from "./container-block";
 import { createLineBlocks } from "./code-line-block";
 import { parseLine } from "./line-parser";
+import { addCopyCodeFunctionality } from "./copy-code";
 
 declare var $docsify: any;
 
@@ -32,6 +33,8 @@ declare var $docsify: any;
         node.outerHTML = createContainerBlock([
           ...createLineBlocks(lines.map((line) => parseLine(line))),
         ]).outerHTML;
+
+        addCopyCodeFunctionality();
       });
     });
   };
