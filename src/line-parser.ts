@@ -1,6 +1,7 @@
+type LineType = "info" | "error" | "success" | "warning" | "default";
 export type LinePayload = {
   prefix: string;
-  type: "info" | "error" | "success" | "warning" | "default";
+  type: LineType;
   text: string;
 };
 
@@ -16,9 +17,18 @@ export const parseLine = (line: string): LinePayload => {
     text = type;
   }
 
+  if (
+    type !== "info" &&
+    type !== "error" &&
+    type !== "success" &&
+    type !== "warning"
+  ) {
+    type = "default";
+  }
+
   return {
     prefix,
-    type: type || "default",
+    type: (type as LineType) || "default",
     text,
   };
 };
