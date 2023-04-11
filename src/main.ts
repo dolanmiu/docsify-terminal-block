@@ -1,6 +1,8 @@
 import "./index.css";
 
 import { createContainerBlock } from "./container-block";
+import { createLineBlocks } from "./code-line-block";
+import { parseLine } from "./line-parser";
 
 declare var $docsify: any;
 
@@ -11,13 +13,11 @@ declare var $docsify: any;
         `#main > pre[data-lang="terminal"]`
       );
 
-      console.log(originalBlocks);
-
       originalBlocks.forEach((node) => {
         node.setAttribute("data-lang", "");
         node.setAttribute("data-prefix", ">");
         const codeNode = node.getElementsByTagName("code")[0];
-        console.log(node);
+        const lines = codeNode.textContent?.split("\n") || [];
 
         node.setAttribute(
           "style",
@@ -30,7 +30,7 @@ declare var $docsify: any;
         node.removeAttribute(":after");
 
         node.outerHTML = createContainerBlock([
-          node.cloneNode(true) as HTMLElement,
+          ...createLineBlocks(lines.map((line) => parseLine(line))),
         ]).outerHTML;
       });
     });

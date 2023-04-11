@@ -3,11 +3,17 @@
 <!-- cSpell:disable -->
 
 ```terminal
-npm run start
+$|npm run start
+$|warning|npm run build
+>|info|npm run start
+>|error|npm run start
+>|success|npm run start
+
 ```
 
 ```bash
 $ npm run start
+$ npm run build
 ```
 
 Lorem ipsum dolor sit amet, _consectetur_ adipisicing elit, sed do eiusmod
@@ -69,4 +75,3 @@ ordered list:
 ##### Header5
 
 You may also want some images right in here like ![GitHub Logo](https://cloud.githubusercontent.com/assets/5456665/13322882/e74f6626-dc00-11e5-921d-f6d024a01eaa.png "GitHub") - you can do that but I would recommend you to use the component "image" and simply split your text.
-

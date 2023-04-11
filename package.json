@@ -7,7 +7,7 @@
   ],
   "main": "dist/index.iife.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm run build:watch\" \"npm run serve:dist\" \"npm run serve:docs\"",
     "serve:docs": "docsify serve docs",
     "serve:dist": "http-server dist",
     "build": "tsc && vite build",
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/dolanmiu/docsify-terminal-block",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "concurrently": "^8.0.1",
     "cspell": "^6.30.0",
     "docsify-cli": "^4.4.4",
     "http-server": "^14.1.1",
