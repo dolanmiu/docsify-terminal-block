@@ -11,7 +11,7 @@ declare var $docsify: any;
   const myPlugin = (hook: any, _vm: any) => {
     hook.doneEach(function () {
       const originalBlocks = document.querySelectorAll(
-        `#main > pre[data-lang="terminal"]`
+        `pre[data-lang="terminal"]`
       );
 
       originalBlocks.forEach((node) => {
