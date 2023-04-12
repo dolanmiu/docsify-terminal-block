@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  prefix: "dtb-",
   corePlugins: {
     preflight: false,
   },

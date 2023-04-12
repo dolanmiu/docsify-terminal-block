@@ -14,12 +14,12 @@ export const addCopyCodeFunctionality = () => {
         .join("\r");
 
       toolTip?.setAttribute("data-tip", "Copied!");
-      toolTip?.classList.add("tooltip-open");
+      toolTip?.classList.add("dtb-tooltip-open");
       setTimeout(() => {
         toolTip?.setAttribute("data-tip", "Copy");
       }, 2000);
       setTimeout(() => {
-        toolTip?.classList.remove("tooltip-open");
+        toolTip?.classList.remove("dtb-tooltip-open");
       }, 1800);
 
       navigator.clipboard.writeText(code);

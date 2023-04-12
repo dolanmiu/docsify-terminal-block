@@ -25,19 +25,19 @@ export const createLineBlocks = (
 
     switch (line.type) {
       case "info":
-        lineBlock.classList.add("!bg-info", "!text-info-content");
+        lineBlock.classList.add("!dtb-bg-info", "!dtb-text-info-content");
         break;
       case "error":
-        lineBlock.classList.add("!bg-error", "!text-error-content");
+        lineBlock.classList.add("!dtb-bg-error", "!dtb-text-error-content");
         break;
       case "success":
-        lineBlock.classList.add("!bg-success", "!text-success-content");
+        lineBlock.classList.add("!dtb-bg-success", "!dtb-text-success-content");
         break;
       case "warning":
-        lineBlock.classList.add("!bg-warning", "!text-warning-content");
+        lineBlock.classList.add("!dtb-bg-warning", "!dtb-text-warning-content");
         break;
       default:
-        codeBlock.classList.add("!text-white");
+        codeBlock.classList.add("!dtb-text-white");
         break;
     }
 
