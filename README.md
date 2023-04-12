@@ -2,7 +2,6 @@
 
 [![](https://data.jsdelivr.com/v1/package/npm/docsify-terminal-block/badge)](https://www.jsdelivr.com/package/npm/docsify-terminal-block)
 
-
 A docsify plugin to add pretty terminal blocks to your docs. It has `Copy to Clipboard` functionality too.
 
 ## Screenshots
