@@ -5,6 +5,14 @@ export type LinePayload = {
   text: string;
 };
 
+const LINE_TYPE_SET = new Set<LineType>([
+  "info",
+  "error",
+  "success",
+  "warning",
+  "default",
+]);
+
 export const parseLine = (line: string): LinePayload => {
   // String comes in this format
   // $|npm run start
@@ -20,16 +28,13 @@ export const parseLine = (line: string): LinePayload => {
   if (type === undefined) {
     type = "default";
     text = prefix;
-    prefix = undefined
+    prefix = undefined;
   }
 
-  if (
-    type !== "info" &&
-    type !== "error" &&
-    type !== "success" &&
-    type !== "warning"
-  ) {
-    type = "default";
+  type = LINE_TYPE_SET.has(type as LineType) ? type : "default";
+  if (LINE_TYPE_SET.has(prefix as LineType)) {
+    type = prefix;
+    prefix = undefined;
   }
 
   return {

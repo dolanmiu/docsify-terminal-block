@@ -7,9 +7,11 @@ npm run start
 $|npm run start
 $|warning|npm run build
 >|info|npm run start
+ |...
 >|error|npm run start
 >|success|npm run start
 
+warning|npm run build
 ```
 
 ```bash

@@ -1,9 +1,13 @@
-# docsify-terminal-block 📝
+# docsify-terminal-block 🖥️
 
-A docsify plugin to add terminal blocks to your docs.
+[![](https://data.jsdelivr.com/v1/package/npm/docsify-terminal-block/badge)](https://www.jsdelivr.com/package/npm/docsify-terminal-block)
 
 
+A docsify plugin to add pretty terminal blocks to your docs. It has `Copy to Clipboard` functionality too.
 
+## Screenshots
+
+![Example](https://i.imgur.com/IZdOtLh.png)
 
 ## Installation
 
@@ -17,26 +21,26 @@ Add the docsify-terminal-block plugin to your index.html after docsify. The plug
 
 Add the `terminal` tag to your markdown file to create a terminal block.
 
-```
+````
 
     ```terminal
     npm run start
     ```
-```
+````
 
 You can add prefixes to the terminal block to change the style of the line. For example adding `$` or `>`:
 
-```
+````
 
     ```terminal
     $|npm run start
     >|npm run start
     ```
-```
+````
 
 You can make the line a warning, info, error, or success by adding `warning`, `info`, `error`, or `success` after the prefix:
 
-```
+````
 
     ```terminal
     $|warning|npm run build
@@ -44,24 +48,24 @@ You can make the line a warning, info, error, or success by adding `warning`, `i
     >|error|npm run start
     >|success|npm run start
     ```
-```
+````
 
 ## Example
 
-```
+````
 
     ```terminal
     npm run start
     $|npm run start
     $|warning|npm run build
     >|info|npm run start
+     |...
     >|error|npm run start
     >|success|npm run start
+
+    warning|npm run build
     ```
-```
-
-```
-
+````
 
 ---
 
