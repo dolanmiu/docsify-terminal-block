@@ -13,7 +13,7 @@ A docsify plugin to add pretty terminal blocks to your docs. It has `Copy to Cli
 Add the docsify-terminal-block plugin to your index.html after docsify. The plugin is available on jsdelivr (below), unpkg, and other CDN services that auto-publish npm packages.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/docsify-terminal-block@1.0.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify-terminal-block@1.0.3"></script>
 ```
 
 ## Usage
