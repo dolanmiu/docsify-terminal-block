@@ -18,6 +18,7 @@ export const createLineBlocks = (
 
     const codeBlock = document.createElement("code");
     codeBlock.setAttribute("class", "lang-terminal"); // Or lang-bash
+    codeBlock.classList.add("lang-terminal");
     codeBlock.setAttribute(
       "style",
       "background-color: transparent !important; padding: 0; margin: 0;"
@@ -26,15 +27,19 @@ export const createLineBlocks = (
     switch (line.type) {
       case "info":
         lineBlock.classList.add("!dtb-bg-info", "!dtb-text-info-content");
+        codeBlock.classList.add("!dtb-text-warning-content", "dtb-opacity-80");
         break;
       case "error":
         lineBlock.classList.add("!dtb-bg-error", "!dtb-text-error-content");
+        codeBlock.classList.add("!dtb-text-error-content", "dtb-opacity-80");
         break;
       case "success":
         lineBlock.classList.add("!dtb-bg-success", "!dtb-text-success-content");
+        codeBlock.classList.add("!dtb-text-success-content", "dtb-opacity-80");
         break;
       case "warning":
         lineBlock.classList.add("!dtb-bg-warning", "!dtb-text-warning-content");
+        codeBlock.classList.add("!dtb-text-warning-content", "dtb-opacity-80");
         break;
       default:
         codeBlock.classList.add("!dtb-text-white");
